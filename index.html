@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bagh Bakri (বাঘ বকরি, Bagh-Chal): the tiger and goat board game of South Asia</title>
+<meta name="description" content="Bagh Bakri (বাঘ বকরি, Bagh-Chal, Bagh Bandi, Sher Bakri, Aadu Puli), the tiger and goat hunt board game of Bangladesh, India, Nepal, Pakistan and Sri Lanka, in cartoon 3D. 4 tigers against 20 goats. Play the computer at 5 levels or a friend. Android, Windows, Linux and in the browser. Free, offline, no ads. By Abacus IT.">
+<meta name="keywords" content="bagh bakri, baghbakri, bag bakri, bagh bokri, bag bokri, bagh chal, bagh-chal, baghchal, bagh bandi, bagh bondi, bagh chhagol, wagh bakri, sher bakri, aadu puli aattam, puli meka, huli kuri, tigers and goats, tiger and goat game, lambs and tigers, hunt game, desi board game, bangladesh, india, nepal, pakistan, sri lanka, বাঘ বকরি, বাঘবন্দী, বাঘ ছাগল, बाघ बकरी, बाघचाल, बाघ चाल, बाघ बंदी, शेर बकरी, वाघ बकरी, باگھ بکری, شیر بکری, باگھ چال, વાઘ બકરી, ਬਾਘ ਬੱਕਰੀ, ବାଘ ଛେଳି, ஆடு புலி ஆட்டம், పులి మేక, ಹುಲಿ ಕುರಿ ಆಟ, ആടുപുലിയാട്ടം, කොටි සහ එළුවන්">
+<meta property="og:title" content="Bagh Bakri (বাঘ বকরি)">
+<meta property="og:description" content="The tiger and goat hunt board game of South Asia, in cartoon 3D. Free, offline, no ads.">
+<meta property="og:image" content="cover-en.png">
+<link rel="icon" href="icon.svg">
+<style>
+@font-face { font-family: "Baloo Da 2"; src: url("BalooDa2.ttf") format("truetype"); font-weight: 400 800; font-display: swap; }
+:root { --ink: #3b2412; --card: #fffaf0; --go: #2fbf71; --go-d: #1f8f52; --b1: #ff8a3d; --b1-d: #d2601a; --b2: #4aa8ff; --b2-d: #2577c9; }
+* { box-sizing: border-box; }
+body { margin: 0; font-family: "Baloo Da 2", "Noto Sans Bengali", system-ui, sans-serif; color: var(--ink); background: linear-gradient(#bfe9ff, #e9f7c8) fixed; }
+.wrap { max-width: 1000px; margin: 0 auto; padding: 18px 16px 40px; }
+header { display: flex; align-items: center; gap: 14px; }
+header img { width: 64px; height: 64px; }
+h1 { margin: 0; font-size: 40px; color: #e8700a; line-height: 1; }
+.tag { margin: 2px 0 0; opacity: .75; }
+.lang { margin-left: auto; background: #fff; border: 0; border-radius: 12px; padding: 6px 14px; font: inherit; font-weight: 700; cursor: pointer; box-shadow: 0 3px 0 #ead9b8; }
+.cover { width: 100%; border-radius: 22px; margin: 18px 0; box-shadow: 0 10px 30px rgba(80,40,10,.25); display: block; }
+.btns { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; margin: 10px 0 24px; }
+.btns a { display: block; text-decoration: none; color: #fff; font-weight: 800; font-size: 19px; text-align: center; border-radius: 18px; padding: 12px 10px 14px; }
+.btns small { display: block; font-size: 13px; font-weight: 500; opacity: .9; }
+.play { background: var(--go); box-shadow: 0 5px 0 var(--go-d); }
+.and { background: var(--b1); box-shadow: 0 5px 0 var(--b1-d); }
+.win, .lin { background: var(--b2); box-shadow: 0 5px 0 var(--b2-d); }
+.shots { display: flex; gap: 12px; overflow-x: auto; padding-bottom: 6px; }
+.shots img { height: 420px; border-radius: 18px; box-shadow: 0 6px 18px rgba(80,40,10,.2); }
+.card { background: var(--card); border-radius: 22px; padding: 18px 22px; margin: 18px 0; box-shadow: 0 5px 0 rgba(120,70,20,.15); }
+.card h2 { margin: 0 0 6px; } .card ul { margin: 6px 0; padding-left: 22px; line-height: 1.6; }
+footer { display: flex; align-items: center; gap: 10px; justify-content: center; margin-top: 26px; opacity: .85; }
+footer img { width: 40px; height: 40px; } footer a { color: inherit; }
+body.en [data-l="bn"], body.bn [data-l="en"] { display: none !important; }
+</style>
+</head>
+<body class="en">
+<div class="wrap">
+  <header>
+    <img src="icon.svg" alt="">
+    <div><h1><span data-l="en">Bagh Bakri</span><span data-l="bn">বাঘ বকরি</span></h1>
+      <p class="tag"><span data-l="en">বাঘ বকরি · Bagh-Chal · the tiger and goat game of South Asia</span><span data-l="bn">বাঘ আর ছাগলের চিরচেনা খেলা, রঙিন ত্রিমাত্রিক রূপে</span></p></div>
+    <button class="lang" id="lang">বাংলা</button>
+  </header>
+  <img class="cover" data-l="en" src="cover-en.png" alt="Bagh Bakri">
+  <img class="cover" data-l="bn" src="cover-bn.png" alt="বাঘ বকরি">
+  <div class="btns">
+    <a class="play" href="play/"><span data-l="en">▶ Play in the browser</span><span data-l="bn">▶ ব্রাউজারে খেলো</span><small data-l="en">iPhone, iPad, any computer</small><small data-l="bn">আইফোন, আইপ্যাড, যেকোনো কম্পিউটার</small></a>
+    <a class="and" href="https://github.com/riadul/bagh-bakri-download/releases/latest/download/BaghBakri.apk"><span data-l="en">Android (APK)</span><span data-l="bn">অ্যান্ড্রয়েড (APK)</span><small>Android 8+</small></a>
+    <a class="win" href="https://github.com/riadul/bagh-bakri-download/releases/latest/download/BaghBakri-Setup-x64.exe"><span data-l="en">Windows</span><span data-l="bn">উইন্ডোজ</span><small>Windows 10 / 11</small></a>
+    <a class="lin" href="https://snapcraft.io/bagh-bakri"><span data-l="en">Linux (Snap Store)</span><span data-l="bn">লিনাক্স (স্ন্যাপ স্টোর)</span><small>sudo snap install bagh-bakri</small></a>
+  </div>
+  <div class="shots" data-l="en"><img src="en-03-pounce.jpg" alt=""><img src="en-02-game.jpg" alt=""><img src="en-04-tutorial.jpg" alt=""><img src="en-06-sunset.jpg" alt=""></div>
+  <div class="shots" data-l="bn"><img src="bn-03-pounce.jpg" alt=""><img src="bn-02-game.jpg" alt=""><img src="bn-04-tutorial.jpg" alt=""><img src="bn-06-sunset.jpg" alt=""></div>
+  <div class="card" data-l="en">
+    <h2>The tiger and goat game, now in 3D</h2>
+    <p>Bagh Bakri (also called Bagh-Chal, Bagh Bandi, Wagh Bakri, Sher Bakri, Aadu Puli Aattam or Tigers and Goats) is the old hunt game of Bangladesh, India, Nepal, Pakistan and Sri Lanka, played for centuries on lines drawn in village courtyards and carved into temple stones.</p>
+    <ul>
+      <li>4 tigers against 20 goats on the classic 5 x 5 board. Play as the tigers or as the goats</li>
+      <li>Play the computer at 5 levels, from Beginner to Expert, or a friend on one device</li>
+      <li>Online play with a friend by room code (switching on very soon)</li>
+      <li>The tiger roars and pounces, the goat trembles and cries, the herd jumps in fear</li>
+      <li>Step-by-step lessons on the real board; a forest clearing, a village yard and a sunset field</li>
+      <li>Profiles, statistics as tiger and as goat, match history; saved after every move; undo and hints</li>
+      <li>Free, fully offline, no ads, no account, no data collected; Bangla and English</li>
+    </ul>
+    <h2>How to play</h2>
+    <p>The goats come onto the board one by one, then move along the lines. A tiger moves one step, or jumps over a goat next to it, to the empty point behind, and eats it. The tigers win by eating 5 goats. The goats win by surrounding the tigers so that no tiger can move.</p>
+  </div>
+  <div class="card" data-l="bn">
+    <h2>বাঘ আর ছাগলের খেলা, এবার ত্রিমাত্রিক রূপে</h2>
+    <p>বাঘ বকরি (বাঘবন্দী, বাঘ-ছাগল) বাংলাদেশ, ভারত, নেপাল আর পাকিস্তানের চিরচেনা খেলা। উঠোনে দাগ কেটে, মন্দিরের পাথরে খোদাই করে কিংবা কাঠের বোর্ডে শত শত বছর ধরে এই খেলা চলে আসছে।</p>
+    <ul>
+      <li>৪টি বাঘ আর ২০টি ছাগল। বাঘ হয়ে ছাগল খাও, নয়তো ছাগল হয়ে বাঘদের ঘিরে আটকে ফেলো</li>
+      <li>কম্পিউটারের সাথে ৫টি স্তর, নতুন থেকে ওস্তাদ পর্যন্ত, অথবা একই ফোনে বন্ধুর সাথে</li>
+      <li>রুম কোড দিয়ে বন্ধুর সাথে অনলাইন খেলা (খুব শিগগিরই চালু হবে)</li>
+      <li>বাঘের গর্জন আর ঝাঁপ, ছাগলের কাঁপুনি আর কান্না, ভয়ে লাফিয়ে ওঠা পাল</li>
+      <li>আসল বোর্ডে ধাপে ধাপে শেখার পাঠ; বনের ধার, গ্রামের উঠোন আর গোধূলির মাঠ</li>
+      <li>নিজের প্রোফাইল, বাঘ আর ছাগল হিসেবে আলাদা হিসাব, খেলার ইতিহাস; প্রতিটি চালে সেভ; ফেরত আর পরামর্শ</li>
+      <li>সম্পূর্ণ ফ্রি, পুরোপুরি অফলাইন, কোনো বিজ্ঞাপন নেই, অ্যাকাউন্ট লাগে না; বাংলা আর ইংরেজি</li>
+    </ul>
+    <h2>কীভাবে খেলবে</h2>
+    <p>ছাগলগুলো একটা একটা করে বোর্ডে আসে, তারপর দাগ ধরে চলে। বাঘ এক ঘর চলে, অথবা পাশের ছাগলের ওপর দিয়ে পেছনের খালি ঘরে লাফ দিয়ে ছাগলটা খেয়ে ফেলে। ৫টি ছাগল খেলে বাঘ জেতে। বাঘদের এমনভাবে ঘিরে ফেলো যেন কোনো বাঘ আর নড়তে না পারে, তাহলে ছাগল জিতবে।</p>
+  </div>
+  <p class="tag" style="font-size:13px">Also known as: bagh bakri, baghbakri, bag bakri, bagh bokri, bag bokri, bagh chal, bagh-chal, baghchal, bagh bandi, bagh bondi, bagh chhagol, wagh bakri, sher bakri, aadu puli aattam, puli meka, huli kuri, tigers and goats, tiger and goat game, lambs and tigers, hunt game, desi board game, bangladesh, india, nepal, pakistan, sri lanka, বাঘ বকরি, বাঘবন্দী, বাঘ ছাগল, बाघ बकरी, बाघचाल, बाघ चाल, बाघ बंदी, शेर बकरी, वाघ बकरी, باگھ بکری, شیر بکری, باگھ چال, વાઘ બકરી, ਬਾਘ ਬੱਕਰੀ, ବାଘ ଛେଳି, ஆடு புலி ஆட்டம், పులి మేక, ಹುಲಿ ಕುರಿ ಆಟ, ആടുപുലിയാട്ടം, කොටි සහ එළුවන්</p>
+  <footer><img src="abacus-it.svg" alt="Abacus IT"><span><span data-l="en">Published by Abacus IT</span><span data-l="bn">প্রকাশক: অ্যাবাকাস আইটি</span> · <a href="https://abacusitbd.com">abacusitbd.com</a> · info@abacusitbd.com</span></footer>
+</div>
+<script>
+// Bangla for Bangla devices or Bangladesh's time zone, English elsewhere (same rule as the game); the button switches.
+function detect() {
+  try {
+    const langs = [...(navigator.languages || []), navigator.language].filter(Boolean).map((l) => l.toLowerCase());
+    if (langs.some((l) => l.startsWith("bn"))) return "bn";
+    const tz = Intl.DateTimeFormat().resolvedOptions().timeZone || "";
+    if (tz === "Asia/Dhaka" || tz === "Asia/Dacca") return "bn";
+  } catch (e) {}
+  return "en";
+}
+function set(l) {
+  document.body.className = l; document.documentElement.lang = l;
+  document.getElementById("lang").textContent = l === "bn" ? "English" : "বাংলা";
+  try { localStorage.setItem("bb.site.lang", l); } catch (e) {}
+}
+let saved = null; try { saved = localStorage.getItem("bb.site.lang"); } catch (e) {}
+set(saved || detect());
+document.getElementById("lang").onclick = () => set(document.body.className === "bn" ? "en" : "bn");
+</script>
+</body>
+</html>
